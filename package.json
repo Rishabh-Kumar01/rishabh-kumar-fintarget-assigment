@@ -1,0 +1,24 @@
+{
+  "name": "task-queue-system",
+  "version": "1.0.0",
+  "description": "User task queuing system with rate limiting",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "cluster": "pm2 start src/app.js -i 2 --name task-queue"
+  },
+  "dependencies": {
+    "bullmq": "^5.1.1",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2",
+    "rate-limiter-flexible": "^4.0.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "pm2": "^5.4.2"
+  }
+}
